@@ -382,6 +382,7 @@
             <div class="tabs">
                 <button class="tab-btn active" onclick="showTab('claude')">Claude</button>
                 <button class="tab-btn" onclick="showTab('chatgpt')">ChatGPT</button>
+                <button class="tab-btn" onclick="showTab('copilot')">Microsoft Copilot</button>
             </div>
             
             <div id="claude-tab" class="tab-content active">
@@ -502,6 +503,71 @@
                     
                     <div class="note-box">
                         <strong>Tips för ChatGPT Plus-användare:</strong> Ni kan skapa ett "Project" (liknande Claude) som sparar kontext mellan sessioner. Gå till "Explore GPTs" → "Create" → Ladda upp filer och lägg in instruktionerna där.
+                    </div>
+                </div>
+            </div>
+            
+            <div id="copilot-tab" class="tab-content">
+                <div class="steps">
+                    <h3>Så här använder du Microsoft Copilot</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <div class="step-title">Kontrollera tillgång</div>
+                            <div class="step-description">
+                                Copilot ingår i vissa Microsoft 365-prenumerationer. Kontrollera med er IT-avdelning om ni har tillgång. Gå till <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a> eller använd Copilot direkt i Word/Teams. <strong>Rekommenderat:</strong> Om tillgängligt, välj "Office Agent (frontier)" för bästa prestanda
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <div class="step-title">Välj arbetsyta</div>
+                            <div class="step-description">
+                                Öppna Copilot i Microsoft 365 (via Teams, Word, eller webbversionen). Starta en ny konversation
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <div class="step-title">Ladda upp filer</div>
+                            <div class="step-description">
+                                I Copilot-chatten, klicka på 📎-ikonen eller dra och släpp filerna: alla 5 veckorapporter, försäljningsdata och HR-policy. Observera: Vissa versioner av Copilot har begränsningar på antalet filer
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <div class="step-title">Ge instruktioner</div>
+                            <div class="step-description">
+                                Skriv följande i chatten:
+                            </div>
+                            <div class="code-block">
+"Jag har laddat upp veckorapporter från mina butikschefer, försäljningsdata och en HR-policy. Du är min AI-assistent som regionchef. När jag ställer frågor ska du: 1) Analysera alla relevanta dokument, 2) Identifiera mönster och prioritera vad som behöver min uppmärksamhet, 3) Ge konkreta handlingsbara förslag baserade på både data och HR-policy, 4) Vara koncis men insiktsfull. Bekräfta att du förstår uppdraget."
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <div class="step-title">Ställ din första fråga</div>
+                            <div class="step-description">
+                                När Copilot bekräftat, testa t.ex. "Vad behöver min omedelbara uppmärksamhet som regionchef denna vecka?"
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="note-box">
+                        <strong>Fördel med Copilot:</strong> Om ni redan använder Microsoft 365 är Copilot integrerat med era befintliga verktyg (Teams, Outlook, Word, Excel). Data stannar inom ert Microsoft-ekosystem vilket kan underlätta GDPR-hantering.
+                        <br><br>
+                        <strong>Office Agent (frontier):</strong> Microsofts nyaste och mest kraftfulla AI-modell. Om du har tillgång till denna version rekommenderas den starkt för komplexa analysuppgifter som denna workshop. Välj Office Agent från modellväljaren om tillgängligt.
                     </div>
                 </div>
             </div>
