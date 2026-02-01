@@ -17,14 +17,14 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             -webkit-font-smoothing: antialiased;
-            color: #1d1d1f;
-            background: #fbfbfd;
+            color: #411B38;
+            background: #FFF6F0;
         }
         
         .hero {
             text-align: center;
             padding: 80px 20px 60px;
-            background: #fbfbfd;
+            background: linear-gradient(135deg, #FFF6F0 0%, #FFE8E0 100%);
         }
         
         .hero h1 {
@@ -33,14 +33,14 @@
             line-height: 1.07;
             letter-spacing: -0.005em;
             margin-bottom: 12px;
-            color: #1d1d1f;
+            color: #411B38;
         }
         
         .hero .subtitle {
             font-size: 28px;
             line-height: 1.2;
             font-weight: 400;
-            color: #6e6e73;
+            color: #7A4864;
             margin-bottom: 20px;
         }
         
@@ -61,7 +61,7 @@
             letter-spacing: -0.003em;
             margin-bottom: 40px;
             text-align: center;
-            color: #1d1d1f;
+            color: #411B38;
         }
         
         .card {
@@ -69,14 +69,15 @@
             border-radius: 18px;
             padding: 48px;
             margin-bottom: 24px;
-            box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(65, 27, 56, 0.08);
+            border: 1px solid rgba(65, 27, 56, 0.06);
         }
         
         .card h3 {
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 16px;
-            color: #1d1d1f;
+            color: #411B38;
         }
         
         .card ul {
@@ -88,7 +89,7 @@
             font-size: 17px;
             line-height: 1.6;
             padding: 12px 0;
-            color: #1d1d1f;
+            color: #411B38;
             display: flex;
             align-items: flex-start;
         }
@@ -97,14 +98,14 @@
             content: "•";
             font-size: 20px;
             margin-right: 12px;
-            color: #1d1d1f;
+            color: #C87C5C;
             font-weight: 600;
         }
         
         .download-hero {
             text-align: center;
             padding: 80px 22px;
-            background: #f5f5f7;
+            background: linear-gradient(135deg, #411B38 0%, #5A2E48 100%);
             border-radius: 18px;
             margin: 40px 0;
         }
@@ -113,18 +114,18 @@
             font-size: 40px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: #1d1d1f;
+            color: white;
         }
         
         .download-hero p {
             font-size: 21px;
-            color: #6e6e73;
+            color: #FFE8E0;
             margin-bottom: 32px;
         }
         
         .btn-primary {
             display: inline-block;
-            background: #0071e3;
+            background: #C87C5C;
             color: white;
             padding: 16px 40px;
             border-radius: 980px;
@@ -137,7 +138,7 @@
         }
         
         .btn-primary:hover {
-            background: #0077ed;
+            background: #D68D6C;
             transform: scale(1.02);
         }
         
@@ -151,21 +152,20 @@
         
         .tab-btn {
             background: white;
-            border: 1px solid #d2d2d7;
+            border: 2px solid #411B38;
             padding: 12px 32px;
             border-radius: 980px;
             font-size: 17px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            color: #1d1d1f;
+            color: #411B38;
             font-family: 'Inter', sans-serif;
         }
         
         .tab-btn.active {
-            background: #1d1d1f;
+            background: #411B38;
             color: white;
-            border-color: #1d1d1f;
         }
         
         .tab-content {
@@ -180,14 +180,15 @@
             background: white;
             border-radius: 18px;
             padding: 48px;
-            box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(65, 27, 56, 0.08);
+            border: 1px solid rgba(65, 27, 56, 0.06);
         }
         
         .steps h3 {
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 32px;
-            color: #1d1d1f;
+            color: #411B38;
         }
         
         .step {
@@ -196,61 +197,74 @@
         
         .step-number {
             display: inline-block;
-            width: 32px;
-            height: 32px;
-            background: #0071e3;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #C87C5C 0%, #D68D6C 100%);
             color: white;
             border-radius: 50%;
             text-align: center;
-            line-height: 32px;
+            line-height: 36px;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 16px;
             margin-right: 16px;
         }
         
         .step-content {
             display: inline-block;
             vertical-align: top;
-            width: calc(100% - 52px);
+            width: calc(100% - 56px);
         }
         
         .step-title {
             font-size: 19px;
             font-weight: 600;
             margin-bottom: 8px;
-            color: #1d1d1f;
+            color: #411B38;
         }
         
         .step-description {
             font-size: 17px;
             line-height: 1.6;
-            color: #6e6e73;
+            color: #7A4864;
+        }
+        
+        .step-description a {
+            color: #C87C5C;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .step-description a:hover {
+            text-decoration: underline;
         }
         
         .code-block {
-            background: #f5f5f7;
+            background: #FFF6F0;
             border-radius: 12px;
             padding: 20px;
             margin-top: 12px;
             font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
             font-size: 14px;
             line-height: 1.6;
-            color: #1d1d1f;
+            color: #411B38;
             overflow-x: auto;
+            border: 1px solid rgba(65, 27, 56, 0.1);
         }
         
         .note-box {
-            background: #f5f5f7;
+            background: #FFF6F0;
             border-radius: 12px;
             padding: 24px;
             margin: 32px 0;
             font-size: 17px;
             line-height: 1.6;
-            color: #1d1d1f;
+            color: #411B38;
+            border-left: 4px solid #C87C5C;
         }
         
         .note-box strong {
             font-weight: 600;
+            color: #411B38;
         }
         
         .examples {
@@ -258,14 +272,15 @@
             border-radius: 18px;
             padding: 48px;
             margin-top: 32px;
-            box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(65, 27, 56, 0.08);
+            border: 1px solid rgba(65, 27, 56, 0.06);
         }
         
         .examples h3 {
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 24px;
-            color: #1d1d1f;
+            color: #411B38;
         }
         
         .examples ul {
@@ -277,8 +292,8 @@
             font-size: 17px;
             line-height: 1.6;
             padding: 16px 0;
-            color: #1d1d1f;
-            border-bottom: 1px solid #f5f5f7;
+            color: #411B38;
+            border-bottom: 1px solid #FFF6F0;
         }
         
         .examples li:last-child {
@@ -288,31 +303,27 @@
         .examples li:before {
             content: "→";
             margin-right: 12px;
-            color: #0071e3;
+            color: #C87C5C;
             font-weight: 600;
         }
         
         .footer {
             text-align: center;
             padding: 60px 22px;
-            background: #f5f5f7;
+            background: linear-gradient(135deg, #411B38 0%, #5A2E48 100%);
             margin-top: 60px;
+            color: white;
         }
         
         .footer p {
             font-size: 15px;
             line-height: 1.6;
-            color: #6e6e73;
+            color: #FFE8E0;
             margin-bottom: 8px;
         }
         
-        a {
-            color: #0071e3;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
+        .footer strong {
+            color: white;
         }
         
         @media (max-width: 768px) {
@@ -375,7 +386,7 @@
         
         <div class="section">
             <h2 class="section-title">Kom igång</h2>
-            <p style="text-align: center; font-size: 19px; color: #6e6e73; margin-bottom: 40px;">
+            <p style="text-align: center; font-size: 19px; color: #7A4864; margin-bottom: 40px;">
                 Välj det verktyg du föredrar – båda fungerar lika bra
             </p>
             
@@ -573,15 +584,67 @@
             </div>
         </div>
         
-        <div class="examples">
-            <h3>Exempel-frågor att testa</h3>
-            <ul>
-                <li>"Vad behöver min omedelbara uppmärksamhet som regionchef denna vecka?"</li>
-                <li>"Vilka butikschefer verkar behöva stöd just nu, och på vilket sätt?"</li>
-                <li>"Jämför Linda i Göteborg med Erik i Malmö – vad kan förklara skillnaderna?"</li>
-                <li>"Jag ska ha 1-on-1 med Erik imorgon – ge mig en strukturerad mötesagenda"</li>
-                <li>"Finns det diskrepanser mellan vad butikscheferna rapporterar och vad försäljningsdata säger?"</li>
-            </ul>
+        <div class="section">
+            <h2 class="section-title">Exempel-frågor att testa</h2>
+            <p style="text-align: center; font-size: 19px; color: #7A4864; margin-bottom: 40px;">
+                Börja enkelt och bygg vidare – här är frågor uppdelade efter komplexitet
+            </p>
+            
+            <div class="examples">
+                <h3>🎯 Grundläggande översikt</h3>
+                <ul>
+                    <li>"Ge mig en kort sammanfattning av läget i alla butiker denna vecka"</li>
+                    <li>"Baserat på alla veckorapporter och försäljningsdata - vad behöver min omedelbara uppmärksamhet som regionchef? Prioritera från viktigast till minst viktigt"</li>
+                </ul>
+            </div>
+            
+            <div class="examples">
+                <h3>👥 Personalfrågor</h3>
+                <ul>
+                    <li>"Vilka butikschefer verkar behöva stöd just nu, och på vilket sätt? Basera på både vad de skriver och hur försäljningen går"</li>
+                    <li>"Thomas i Uppsala rapporterar personalkonflikter. Vad säger vår HR-policy om detta och vad är mina nästa steg?"</li>
+                    <li>"Jag ska ha 1-on-1 med Erik i Malmö imorgon. Baserat på hans rapport och försäljningssiffror - vad bör jag ta upp? Ge mig 3-5 konkreta diskussionspunkter"</li>
+                </ul>
+            </div>
+            
+            <div class="examples">
+                <h3>📊 Försäljningsanalys</h3>
+                <ul>
+                    <li>"Jämför Linda i Göteborg (som går bra) med Erik i Malmö (som kämpar). Vad kan förklara skillnaden? Finns det något vi kan lära?"</li>
+                    <li>"Finns det några mönster eller trender över alla butiker som jag borde vara medveten om?"</li>
+                    <li>"Vilka produktkategorier går bäst/sämst? Vad rekommenderar du baserat på det?"</li>
+                </ul>
+            </div>
+            
+            <div class="examples">
+                <h3>⚙️ Operativa frågor</h3>
+                <ul>
+                    <li>"Stockholm rapporterar kassasystemstopp. Västerås har konflikt om retur. Behöver jag göra något systemiskt eller är det isolerade händelser?"</li>
+                    <li>"Ge mig en översikt över personalsituationen: Vem behöver rekrytera? Vem har kapacitetsproblem?"</li>
+                </ul>
+            </div>
+            
+            <div class="examples">
+                <h3>✍️ Konkreta output</h3>
+                <ul>
+                    <li>"Skriv ett uppmuntrande men konstruktivt mail till Erik i Malmö baserat på hans rapport. Visa att jag förstår utmaningarna men också vill stötta honom framåt"</li>
+                    <li>"Baserat på alla rapporter - skapa en prioriterad åtgärdslista för mig som regionchef för nästa två veckor. Inkludera vem jag ska kontakta och vad jag ska göra"</li>
+                    <li>"Vad går riktigt bra just nu som jag borde lyfta fram och fira med teamet?"</li>
+                </ul>
+            </div>
+            
+            <div class="examples">
+                <h3>🔍 Kritiskt tänkande</h3>
+                <ul>
+                    <li>"Finns det några diskrepanser mellan vad butikscheferna rapporterar och vad försäljningssiffrorna säger?"</li>
+                    <li>"Vilka risker ser du baserat på rapporterna? Vad kan gå fel om jag inte agerar?"</li>
+                    <li>"Om nuvarande trender fortsätter - var kommer vi vara om 3 månader? Vad bör jag göra NU för att påverka det?"</li>
+                </ul>
+            </div>
+            
+            <div class="note-box" style="margin-top: 40px;">
+                <strong>💡 Tips:</strong> Börja med grundläggande frågor för att bygga förtroende, sedan testa mer komplexa analyser. Du kan alltid ställa följdfrågor för att fördjupa: "Förklara mer om varför du tror Thomas behöver stöd" eller "Kan du ge konkreta exempel från rapporterna som stöder din analys?"
+            </div>
         </div>
         
         <div class="note-box">
