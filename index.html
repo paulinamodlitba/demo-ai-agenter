@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop: AI-agenter för ledare inom handeln</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: #1d1d1f;
+            background: #fbfbfd;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: #fbfbfd;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.07;
+            letter-spacing: -0.005em;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        
+        .hero .subtitle {
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #6e6e73;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.003em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #1d1d1f;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 48px;
+            margin-bottom: 24px;
+            box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .card li {
+            font-size: 17px;
+            line-height: 1.6;
+            padding: 12px 0;
+            color: #1d1d1f;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .card li:before {
+            content: "•";
+            font-size: 20px;
+            margin-right: 12px;
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+        
+        .download-hero {
+            text-align: center;
+            padding: 80px 22px;
+            background: #f5f5f7;
+            border-radius: 18px;
+            margin: 40px 0;
+        }
+        
+        .download-hero h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+        
+        .download-hero p {
+            font-size: 21px;
+            color: #6e6e73;
+            margin-bottom: 32px;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: #0071e3;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 980px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background: #0077ed;
+            transform: scale(1.02);
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            background: white;
+            border: 1px solid #d2d2d7;
+            padding: 12px 32px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #1d1d1f;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .tab-btn.active {
+            background: #1d1d1f;
+            color: white;
+            border-color: #1d1d1f;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .steps {
+            background: white;
+            border-radius: 18px;
+            padding: 48px;
+            box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .steps h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: #1d1d1f;
+        }
+        
+        .step {
+            margin-bottom: 32px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: #0071e3;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 600;
+            font-size: 15px;
+            margin-right: 16px;
+        }
+        
+        .step-content {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 52px);
+        }
+        
+        .step-title {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1d1d1f;
+        }
+        
+        .step-description {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #6e6e73;
+        }
+        
+        .code-block {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 12px;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #1d1d1f;
+            overflow-x: auto;
+        }
+        
+        .note-box {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #1d1d1f;
+        }
+        
+        .note-box strong {
+            font-weight: 600;
+        }
+        
+        .examples {
+            background: white;
+            border-radius: 18px;
+            padding: 48px;
+            margin-top: 32px;
+            box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .examples h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1d1d1f;
+        }
+        
+        .examples ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .examples li {
+            font-size: 17px;
+            line-height: 1.6;
+            padding: 16px 0;
+            color: #1d1d1f;
+            border-bottom: 1px solid #f5f5f7;
+        }
+        
+        .examples li:last-child {
+            border-bottom: none;
+        }
+        
+        .examples li:before {
+            content: "→";
+            margin-right: 12px;
+            color: #0071e3;
+            font-weight: 600;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 60px 22px;
+            background: #f5f5f7;
+            margin-top: 60px;
+        }
+        
+        .footer p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #6e6e73;
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #0071e3;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero .subtitle {
+                font-size: 21px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .card, .steps, .examples {
+                padding: 32px 24px;
+            }
+            
+            .download-hero {
+                padding: 48px 24px;
+            }
+            
+            .download-hero h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Workshop: AI-agenter för ledare inom handeln</h1>
+        <p class="subtitle">Material och instruktioner</p>
+    </div>
+    
+    <div class="container">
+        <div class="section">
+            <div class="card">
+                <h3>🎯 Demofiler för Claude Project</h3>
+                <ul>
+                    <li>5 realistiska veckorapporter från butikschefer</li>
+                    <li>Försäljningsdata och nyckeltal</li>
+                    <li>HR-policy för butikschefer</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>📚 Material</h3>
+                <ul>
+                    <li>Arbetsbok för individuell kartläggning (efter kursen)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="download-hero">
+            <h2>Hämta alla filer</h2>
+            <p>Komplett paket med demofiler och arbetsbok</p>
+            <a href="workshop_material.zip" class="btn-primary" download>Ladda ner material</a>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Kom igång</h2>
+            <p style="text-align: center; font-size: 19px; color: #6e6e73; margin-bottom: 40px;">
+                Välj det verktyg du föredrar – båda fungerar lika bra
+            </p>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('claude')">Claude</button>
+                <button class="tab-btn" onclick="showTab('chatgpt')">ChatGPT</button>
+            </div>
+            
+            <div id="claude-tab" class="tab-content active">
+                <div class="steps">
+                    <h3>Så här använder du Claude Projects</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <div class="step-title">Skapa konto</div>
+                            <div class="step-description">
+                                Gå till <a href="https://claude.ai" target="_blank">claude.ai</a> och skapa ett gratis konto
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <div class="step-title">Skapa Project</div>
+                            <div class="step-description">
+                                Klicka på "Projects" i vänstermenyn → "Create Project" → Namnge det t.ex. "Chef-Agent Demo"
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <div class="step-title">Ladda upp filer</div>
+                            <div class="step-description">
+                                Klicka "Add Content" och ladda upp alla 5 veckorapporter, försäljningsdata och HR-policy
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <div class="step-title">Custom Instructions</div>
+                            <div class="step-description">
+                                Klicka på "Set custom instructions" och skriv:
+                            </div>
+                            <div class="code-block">
+"Du är en AI-agent som hjälper mig som regionchef att analysera veckorapporter från mina butikschefer. När jag frågar dig ska du: 1) Läsa alla tillgängliga rapporter och försäljningsdata, 2) Identifiera mönster, problem och framgångar, 3) Prioritera vad som behöver min uppmärksamhet, 4) Föreslå konkreta åtgärder och uppföljningsfrågor, 5) Basera svar på både HR-policyn och försäljningsdata. Var koncis men insiktsfull."
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <div class="step-title">Ställ din första fråga</div>
+                            <div class="step-description">
+                                Testa t.ex. "Vad behöver min omedelbara uppmärksamhet som regionchef denna vecka?"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="chatgpt-tab" class="tab-content">
+                <div class="steps">
+                    <h3>Så här använder du ChatGPT</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <div class="step-title">Skapa konto</div>
+                            <div class="step-description">
+                                Gå till <a href="https://chat.openai.com" target="_blank">chat.openai.com</a> och skapa ett gratis konto
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <div class="step-title">Starta ny chatt</div>
+                            <div class="step-description">
+                                Klicka på "New chat" (ChatGPT Plus-användare kan skapa ett "Project")
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <div class="step-title">Ladda upp filer</div>
+                            <div class="step-description">
+                                Klicka på 📎-ikonen (pappersklämma) och ladda upp alla 5 veckorapporter, försäljningsdata och HR-policy
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <div class="step-title">Ge instruktioner</div>
+                            <div class="step-description">
+                                Börja chatten med följande meddelande:
+                            </div>
+                            <div class="code-block">
+"Jag har laddat upp veckorapporter från mina butikschefer, försäljningsdata och en HR-policy. Du är min AI-assistent som regionchef. När jag ställer frågor ska du: 1) Analysera alla relevanta dokument, 2) Identifiera mönster och prioritera vad som behöver min uppmärksamhet, 3) Ge konkreta handlingsbara förslag baserade på både data och HR-policy, 4) Vara koncis men insiktsfull. Bekräfta att du förstår uppdraget."
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <div class="step-title">Ställ din första fråga</div>
+                            <div class="step-description">
+                                När ChatGPT bekräftat, testa t.ex. "Vad behöver min omedelbara uppmärksamhet som regionchef denna vecka?"
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="note-box">
+                        <strong>Tips för ChatGPT Plus-användare:</strong> Ni kan skapa ett "Project" (liknande Claude) som sparar kontext mellan sessioner. Gå till "Explore GPTs" → "Create" → Ladda upp filer och lägg in instruktionerna där.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="examples">
+            <h3>Exempel-frågor att testa</h3>
+            <ul>
+                <li>"Vad behöver min omedelbara uppmärksamhet som regionchef denna vecka?"</li>
+                <li>"Vilka butikschefer verkar behöva stöd just nu, och på vilket sätt?"</li>
+                <li>"Jämför Linda i Göteborg med Erik i Malmö – vad kan förklara skillnaderna?"</li>
+                <li>"Jag ska ha 1-on-1 med Erik imorgon – ge mig en strukturerad mötesagenda"</li>
+                <li>"Finns det diskrepanser mellan vad butikscheferna rapporterar och vad försäljningsdata säger?"</li>
+            </ul>
+        </div>
+        
+        <div class="note-box">
+            <strong>Viktigt om GDPR:</strong> Ladda aldrig upp känsliga personuppgifter (personnummer, löner, medicinska detaljer) i AI-verktyg. Demofilerna är fiktiva och säkra att använda. När du testar med egna filer, anonymisera alltid känslig data först.
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p><strong>We Should Be Friends AB</strong></p>
+        <p>AI-konsultation för svenska organisationer</p>
+    </div>
+    
+    <script>
+        function showTab(platform) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById(platform + '-tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
